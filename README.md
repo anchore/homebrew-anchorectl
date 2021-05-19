@@ -1,1 +1,1 @@
-# homebrew-enterprise-cli
+# homebrew-anchorectl
