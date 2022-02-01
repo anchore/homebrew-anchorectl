@@ -6,24 +6,27 @@ require_relative "lib/private"
 class Anchorectl < Formula
   desc "A CLI tool for interacting with Anchore"
   homepage "https://github.com/anchore/anchorectl"
-  version "0.1.3"
-  bottle :unneeded
+  version "0.1.4"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/anchore/anchorectl/releases/download/v0.1.3/anchorectl_0.1.3_darwin_amd64.tar.gz", :using => GitHubPrivateRepositoryReleaseDownloadStrategy
-      sha256 "cc3aefc5c4f5cfac9e885fee6f3e9fda60fb2e5046a92eb158e848c7c1254ea1"
+      url "https://github.com/anchore/anchorectl/releases/download/v0.1.4/anchorectl_0.1.4_darwin_amd64.tar.gz", :using => GitHubPrivateRepositoryReleaseDownloadStrategy
+      sha256 "e411f3fb59b67c22d7618c2feb3495fd93326bf1c70a6a291c1fe129755c1b21"
+
+      def install
+        bin.install "anchorectl"
+      end
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/anchore/anchorectl/releases/download/v0.1.3/anchorectl_0.1.3_linux_amd64.tar.gz", :using => GitHubPrivateRepositoryReleaseDownloadStrategy
-      sha256 "5496c090131210765a336b07ddb26f340a13c845caabf8bb64b2cbef9ef8e5c8"
-    end
-  end
+      url "https://github.com/anchore/anchorectl/releases/download/v0.1.4/anchorectl_0.1.4_linux_amd64.tar.gz", :using => GitHubPrivateRepositoryReleaseDownloadStrategy
+      sha256 "13a740332f69ea74679e81e81a2c474736e7ced91af76067e97614d9012f51e5"
 
-  def install
-    bin.install "anchorectl"
+      def install
+        bin.install "anchorectl"
+      end
+    end
   end
 end
