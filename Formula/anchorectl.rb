@@ -6,12 +6,12 @@ require_relative "lib/private"
 class Anchorectl < Formula
   desc "A CLI tool for interacting with Anchore"
   homepage "https://github.com/anchore/anchorectl"
-  version "0.1.6"
+  version "0.2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/anchore/anchorectl/releases/download/v0.1.6/anchorectl_0.1.6_darwin_amd64.tar.gz", :using => GitHubPrivateRepositoryReleaseDownloadStrategy
-      sha256 "d9fcd680d552022b089879b8b38577f12208e539783ca55755112b60e84c1003"
+      url "https://github.com/anchore/anchorectl/releases/download/v0.2.0/anchorectl_0.2.0_darwin_amd64.tar.gz", :using => GitHubPrivateRepositoryReleaseDownloadStrategy
+      sha256 "fd5187ec893b192065c8c4243f9fde63ba2f8623efce46e80818c39d2028aef0"
 
       def install
         bin.install "anchorectl"
@@ -21,8 +21,8 @@ class Anchorectl < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/anchore/anchorectl/releases/download/v0.1.6/anchorectl_0.1.6_linux_amd64.tar.gz", :using => GitHubPrivateRepositoryReleaseDownloadStrategy
-      sha256 "86522aae5f6b2c74b98ed0b72ebeedf08c2f953c5b0f7e1cc7bcd948f0fadbec"
+      url "https://github.com/anchore/anchorectl/releases/download/v0.2.0/anchorectl_0.2.0_linux_amd64.tar.gz", :using => GitHubPrivateRepositoryReleaseDownloadStrategy
+      sha256 "5e62f7e3140252b95c2a63c1c72031bb30ef2ef1ff62c6f33f83fc40f05f44d2"
 
       def install
         bin.install "anchorectl"
